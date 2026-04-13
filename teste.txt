@@ -29,8 +29,8 @@ git push = Envia os arquivos (ou suas alterações) locais para o repo remoto.
     git push -u origin main = Nesse caso, dá um push, na branch principal.
     git push -f origin main = Força o push, sobrescrevendo o que está no GitHub.
 
-git pull = 
-    git pull origin main --rebase = Evita commits de merge desnecessário.
+git pull = Baixa as mudanças do repo remoto. 
+    git pull origin main --rebase = Baixa o repo remoto, apaga temporariamente o repo local e os recoloca por cima.
 
 git log =
     git log --oneline --graph --all = Mostra onde os branches se separam.
