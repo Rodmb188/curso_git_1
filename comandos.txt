@@ -37,6 +37,7 @@ git log =
 
 git mv (arquivo antigo) (arquivo novo) = Renomeia o arquivo.
 
+git rm (arquivo) = Remove o arquivo.
+
 git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um projeto em andamento.
     git clone (url) . = Clona o repo dentro do diretório atual (só se a pasta estiver vazia).
-    
