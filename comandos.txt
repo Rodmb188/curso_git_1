@@ -18,7 +18,7 @@ git branch = Lista todos os branchs.
     git branch -M main = Cria um branch (ramificação do projeto). A primeira e principal costuma ser a main.
 
 git remote = É um repo remoto
-    git remote -v = Mostra a URL remota após o nome.
+    git remote -v = Mostra a url remota após o nome.
     git remote add origin (link do github) = Sincroniza o projeto adicionando uma origem a ele.
     git remote rename (antigo) (novo) = Muda o nome do repo remoto.
     git remote set-url (nome) (nova url) = Muda a url do projeto.
@@ -33,4 +33,10 @@ git pull = Baixa as mudanças do repo remoto.
     git pull origin main --rebase = Baixa o repo remoto, apaga temporariamente o repo local e os recoloca por cima.
 
 git log =
-    git log --oneline --graph --all = Mostra onde os branches se separam.
+    git log --oneline --graph --all = Mostra onde os branchs se separam.
+
+git mv (arquivo antigo) (arquivo novo) = Renomeia o arquivo.
+
+git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um projeto em andamento.
+    git clone (url) . = Clona o repo dentro do diretório atual (só se a pasta estiver vazia).
+    
