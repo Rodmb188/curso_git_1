@@ -32,10 +32,10 @@ git push = Envia os arquivos (ou suas alterações) locais para o repo remoto.
 git pull = Baixa as mudanças do repo remoto. 
     git pull origin main --rebase = Baixa o repo remoto, apaga temporariamente o repo local e os recoloca por cima.
 
-git log =
+git log = Mostra o histórico de alterações do repo. "Q" (ou "Ctrl+C" no Linux) sai desse modo.
     git log --oneline --graph --all = Mostra onde os branchs se separam.
 
-git mv (arquivo antigo) (arquivo novo) = Renomeia o arquivo.
+git mv (arquivo antigo) (arquivo novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
 
 git rm (arquivo) = Remove o arquivo.
 
