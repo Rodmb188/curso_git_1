@@ -33,6 +33,7 @@ git pull = Baixa as mudanças do repo remoto.
     git pull origin main --rebase = Baixa o repo remoto, apaga temporariamente o repo local e os recoloca por cima.
 
 git log = Mostra o histórico de alterações do repo. "Q" (ou "Ctrl+C" no Linux) sai desse modo.
+    git log --oneline -1 = Mostra o commit atual (onde o HEAD está).
     git log --oneline --graph --all = Mostra onde os branchs se separam.
 
 git mv (arquivo antigo) (arquivo/local novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
@@ -43,3 +44,8 @@ git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um p
     git clone (url) . = Clona o repo dentro do diretório atual (só se a pasta estiver vazia).
 
 git checkout (arquivo) = Restaura o arquivo para o último commit, descartando alterções locais.
+
+git reset = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
+    git reset --soft = Mantém os arquivos e o Stage, mas volta o histórico.
+    git reset --mixed = Mantém os arquivos, mas limpa o Stage e volta o histórico.
+    git reset --hard = Apaga os arquivos, limpa o Stage e volta o histórico.
