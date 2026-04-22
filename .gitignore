@@ -1,5 +1,8 @@
 .gitignore é um arquivo criado para informar ao git quais
 são os arquivos que ele não deve importar para o repo.
 
+O '/*' quer dizer todos os arquivos dentro dessa pasta serão selecionandos.
+No caso atual, o '/*' é utilizado para ignorar todos os arquivos dentro da pasta.  
+
 d.txt
 node_modules/*
