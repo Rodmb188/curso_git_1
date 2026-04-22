@@ -45,7 +45,7 @@ git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um p
 
 git checkout (arquivo) = Restaura o arquivo para o último commit, descartando alterções locais.
 
-git reset = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
-    git reset --soft = Mantém os arquivos e o Stage, mas volta o histórico.
-    git reset --mixed = Mantém os arquivos, mas limpa o Stage e volta o histórico.
-    git reset --hard = Apaga os arquivos, limpa o Stage e volta o histórico.
+git reset origin/main = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
+    git reset --soft origin/main = Mantém os arquivos e o Stage, mas volta o histórico.
+    git reset --mixed origin/main = Mantém os arquivos, mas limpa o Stage e volta o histórico.
+    git reset --hard origin/main = Apaga os arquivos, limpa o Stage e volta o histórico.
