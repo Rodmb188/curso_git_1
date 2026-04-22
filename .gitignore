@@ -1,0 +1,5 @@
+.gitignore é um arquivo criado para informar ao git quais
+são os arquivos que ele não deve importar para o repo.
+
+d.txt
+node_modules/*
