@@ -35,7 +35,7 @@ git pull = Baixa as mudanças do repo remoto.
 git log = Mostra o histórico de alterações do repo. "Q" (ou "Ctrl+C" no Linux) sai desse modo.
     git log --oneline --graph --all = Mostra onde os branchs se separam.
 
-git mv (arquivo antigo) (arquivo novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
+git mv (arquivo antigo) (arquivo/local novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
 
 git rm (arquivo) = Remove o arquivo.
 
