@@ -17,7 +17,7 @@ git commit = "Commita" o arquivo, envia os arquivos (ou suas alterações) para 
 git branch = Lista todos os branchs.
     git branch -M main = Cria um branch (ramificação do projeto). A primeira e principal costuma ser a main.
 
-git remote = É um repo remoto
+git remote = É um repo remoto.
     git remote -v = Mostra a url remota após o nome.
     git remote add origin (link do github) = Sincroniza o projeto adicionando uma origem a ele.
     git remote rename (antigo) (novo) = Muda o nome do repo remoto.
