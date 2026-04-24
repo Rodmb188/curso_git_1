@@ -14,8 +14,10 @@ git commit = "Commita" o arquivo, envia os arquivos (ou suas alterações) para 
     git commit -a -m ("mensagem") = "Commita" todos os arquivos com mensagem.
     git commit --amend -m ("nova mensagem") = Altera a mensagem do commit anterior.
 
-git branch = Lista todos os branchs.
+git branch = Lista todos os branches.
     git branch -M main = Cria um branch (ramificação do projeto). A primeira e principal costuma ser a main.
+    git branch (nome do branch) = Cria um branch novo.
+    git branch -d (nome do branch) = Apaga o branch selecionado. 
 
 git remote = É um repo remoto.
     git remote -v = Mostra a url remota após o nome.
@@ -34,7 +36,7 @@ git pull = Baixa as mudanças do repo remoto.
 
 git log = Mostra o histórico de alterações do repo. "Q" (ou "Ctrl+C" no Linux) sai desse modo.
     git log --oneline -1 = Mostra o commit atual (onde o HEAD está).
-    git log --oneline --graph --all = Mostra onde os branchs se separam.
+    git log --oneline --graph --all = Mostra onde os branches se separam.
 
 git mv (arquivo antigo) (arquivo/local novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
 
