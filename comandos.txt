@@ -46,9 +46,16 @@ git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um p
     git clone (url) . = Clona o repo dentro do diretório atual (só se a pasta estiver vazia).
 
 git checkout (arquivo) = Restaura o arquivo para o último commit, descartando alterções locais.
-    git checkout -b (nome do branch) = Cria e muda para branch criado.
+git checkout (branch) = Troca para o branch selecionado.
+    git checkout -b (branch) = Cria e muda para o branch criado.
 
 git reset origin/main = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
     git reset --soft origin/main = Mantém os arquivos e o Stage, mas volta o histórico.
     git reset --mixed origin/main = Mantém os arquivos, mas limpa o Stage e volta o histórico.
     git reset --hard origin/main = Apaga os arquivos, limpa o Stage e volta o histórico.
+
+git switch (branch) = Troca para o branch selecionado. Substitui o "git checkout (branch)"
+    git switch -c (novo branch) = Cria e muda para o branch criado.
+
+git restore (arquivo) = Restaura o arquivo para o último commit, descartando alterações locais.
+    git restore -s (ID do commit) (arquivo) = Restaura o arquivo para o commit selecionado.
