@@ -59,3 +59,7 @@ git switch (branch) = Troca para o branch selecionado. Substitui o "git checkout
 
 git restore (arquivo) = Restaura o arquivo para o último commit, descartando alterações locais.
     git restore -s (ID do commit) (arquivo) = Restaura o arquivo para o commit selecionado.
+
+git merge (nome do branch) = Integra o branch atual com as informações do branch selecionado.
+Se houver divergências cria um merge commit, se não, faz um fast-foward (apenas move o ponteiro do branch selecionado com o atual).
+    git merge --no-ff (nome do branch) = Não faz um fast-foward (mesmo sendo possível). Gera um merge commit.
