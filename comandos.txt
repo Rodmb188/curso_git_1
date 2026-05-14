@@ -17,7 +17,8 @@ git commit = "Commita" o arquivo, envia os arquivos (ou suas alterações) para 
 git branch = Lista todos os branches.
     git branch -M main = Cria um branch (ramificação do projeto). A primeira e principal costuma ser a main.
     git branch (nome do branch) = Cria um branch novo.
-    git branch -d (nome do branch) = Apaga o branch selecionado. 
+    git branch -d (nome do branch) = Apaga o branch selecionado.
+    git branch -f/--force (nome do branch) (referência) = Move à força o branch selecionado para a referência.
 
 git remote = É um repo remoto.
     git remote -v = Mostra a url remota após o nome.
@@ -48,11 +49,16 @@ git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um p
 git checkout (arquivo) = Restaura o arquivo para o último commit, descartando alterções locais.
 git checkout (branch) = Troca para o branch selecionado.
     git checkout -b (branch) = Cria e muda para o branch criado.
+git checkout (commit) = Anexa o HEAD em um commit ao invés de branch.
+    git checkout (commit/branch)^ = Anexa o HEAD ao commit anterior.
+    git checkout (commit/branch)^^ = Anexa o HEAD ao commit anterior do anterior (o avô do commit).
+    git checkout (commit/branch)~(num) = Anexa o HEAD ao commit anterior equivalente ao número.
 
 git reset origin/main = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
     git reset --soft origin/main = Mantém os arquivos e o Stage, mas volta o histórico.
     git reset --mixed origin/main = Mantém os arquivos, mas limpa o Stage e volta o histórico.
     git reset --hard origin/main = Apaga os arquivos, limpa o Stage e volta o histórico.
+git reset (referência) = Reverte alterações no histórico realizadas após a referência.
 
 git switch (branch) = Troca para o branch selecionado. Substitui o "git checkout (branch)"
     git switch -c (novo branch) = Cria e muda para o branch criado.
@@ -63,3 +69,5 @@ git restore (arquivo) = Restaura o arquivo para o último commit, descartando al
 git merge (nome do branch) = Integra o branch atual com as informações do branch selecionado.
 Se houver divergências cria um merge commit, se não, faz um fast-foward (apenas move o ponteiro do branch selecionado com o atual).
     git merge --no-ff (nome do branch) = Não faz um fast-foward (mesmo sendo possível). Gera um merge commit.
+
+git rebase (nome do branch) = Reescreve o histórico, movendo o branch atual para o branch selecionado. Criando um histórico linear.
