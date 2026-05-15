@@ -1,5 +1,3 @@
-Testando repo - Alteração 1
-
 git init = Inicia o repositório.
 
 git status = Mostra a situação dos arquivos no git.
@@ -7,7 +5,7 @@ git status = Mostra a situação dos arquivos no git.
 git add (arquivo) = Adiciona arquivos ao git.
     git add . = Adiciona tudo que não foi adicionado ainda.
 
-git commit = "Commita" o arquivo, envia os arquivos (ou suas alterações) para o repo local.
+git commit = "Commita" o arquivo. Envia os arquivos (ou suas alterações) para o repo local.
     git commit -m ("mensagem") = "Commita" o primeiro arquivo com mensagem.
     git commit (arquivo) -m ("mensagem") = "Commita" o arquivo com mensagem.
     git commit -a = "Commita" todos os arquivos.
@@ -60,6 +58,10 @@ git reset origin/main = Utilizado para voltar ao último commit. Se não especif
     git reset --hard origin/main = Apaga os arquivos, limpa o Stage e volta o histórico.
 git reset (referência) = Reverte alterações no histórico realizadas após a referência.
 
+git revert (referência) = Cria um novo commit que desfaz as alterações da referência, sem apagar o histórico anterior.
+git revert HEAD =  Cria um novo commit para desfazer o último commit.
+git revert -n/--no-commit (referência) = Reverte as alterações da referência, deixando o commit aberto para alterações.
+
 git switch (branch) = Troca para o branch selecionado. Substitui o "git checkout (branch)"
     git switch -c (novo branch) = Cria e muda para o branch criado.
 
@@ -70,4 +72,11 @@ git merge (nome do branch) = Integra o branch atual com as informações do bran
 Se houver divergências cria um merge commit, se não, faz um fast-foward (apenas move o ponteiro do branch selecionado com o atual).
     git merge --no-ff (nome do branch) = Não faz um fast-foward (mesmo sendo possível). Gera um merge commit.
 
-git rebase (nome do branch) = Reescreve o histórico, movendo o branch atual para o branch selecionado. Criando um histórico linear.
+git rebase (nome do branch) = Reescreve o histórico, copiando o branch atual para o branch selecionado. Criando um histórico linear.
+    git rebase -i (referência) = Abre um painel que permite editar, juntar, apagar e reordenar os commits que serão copiados no local selecionado.
+        pick: Mantém o commit como está.
+        reword: Mantém o commit, mas permite mudar a mensagem do texto.
+        s/squash: Junta o commit selecionado com o commit de cima.
+        d/drop: Deleta o commit do histórico.
+
+git cherry-pick (referência) = Copia as referências selecionadas de outro branch para o HEAD.
