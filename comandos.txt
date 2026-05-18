@@ -80,3 +80,15 @@ git rebase (nome do branch) = Reescreve o histórico, copiando o branch atual pa
         d/drop: Deleta o commit do histórico.
 
 git cherry-pick (referência) = Copia as referências selecionadas de outro branch para o HEAD.
+
+git tag (nome da tag) = Cria uma marcação permanente no commit atual.
+    git tag -a (nome da tag) -m ("mensagem") = Cria uma marcação permanente no commit atual, contendo data e informações do autor da tag.
+    git tag (nome da tag) (referência) = Cria uma marcação permanente na referência selecionada.
+
+git describe = Procura tags anotadas e escreve com base no commit atual onde está a tag anterior mais próxima.
+    git describe (referência) = Procura tags anotadas e escreve com base na referência selecionada onde está a tag anterior mais próxima.
+
+git show = Exibe todo o histórico e as alterações do HEAD.
+    git show (referência) = Exibe o histórico e alterações da referência selecionada.
+    git show --name-only (nome da tag ou commit) = Mostra o nome do arquivo modificado.
+    git show -s (referência) = Exibe apenas a mensagem da alteração.
