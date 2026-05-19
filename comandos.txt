@@ -49,6 +49,7 @@ git checkout (branch) = Troca para o branch selecionado.
     git checkout -b (branch) = Cria e muda para o branch criado.
 git checkout (commit) = Anexa o HEAD em um commit ao invés de branch.
     git checkout (commit/branch)^ = Anexa o HEAD ao commit anterior.
+    git checkout (commit/branch)^(num) = Anexa o HEAD ao commit anterior, especificando para qual branch irá voltar.
     git checkout (commit/branch)^^ = Anexa o HEAD ao commit anterior do anterior (o avô do commit).
     git checkout (commit/branch)~(num) = Anexa o HEAD ao commit anterior equivalente ao número.
 
