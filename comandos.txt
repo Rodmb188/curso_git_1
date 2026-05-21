@@ -12,8 +12,11 @@ git commit = "Commita" o arquivo. Envia os arquivos (ou suas alterações) para 
     git commit -a -m ("mensagem") = "Commita" todos os arquivos com mensagem.
     git commit --amend -m ("nova mensagem") = Altera a mensagem do commit anterior.
 
+git diff = Mostra alterações ainda não adicionadas ao Stage.
+    git diff --staged = Mostra alterações que estão no Stage.
+
 git branch = Lista todos os branches.
-    git branch -M main = Cria um branch (ramificação do projeto). A primeira e principal costuma ser a main.
+    git branch -M (nome do branch) = Renomeia o branch atual, forçando a alteração. A primeira e principal costuma ser a main.
     git branch (nome do branch) = Cria um branch novo.
     git branch -d (nome do branch) = Apaga o branch selecionado.
     git branch -f/--force (nome do branch) (referência) = Move à força o branch selecionado para a referência.
@@ -30,16 +33,30 @@ git push = Envia os arquivos (ou suas alterações) locais para o repo remoto.
     git push -u origin main = Nesse caso, dá um push, na branch principal.
     git push -f origin main = Força o push, sobrescrevendo o que está no GitHub.
 
-git pull = Baixa as mudanças do repo remoto. 
-    git pull origin main --rebase = Baixa o repo remoto, apaga temporariamente o repo local e os recoloca por cima.
+git pull = Baixa as alterações do repo remoto. 
+    git pull origin main --rebase = Baixa o repo remoto e reaplica os commits locais por cima.
+
+git fetch = Baixa alterações do repo remoto sem aplicá-las no branch atual.
+    git fetch (repositório) = Baixa as alterções de um repositório específico sem alterar a branch atual.
+    git fetch --all = Baixa as alterções de todos os repositórios sem alterar a branch atual.
+
+git stash = Guarda temporariamente alterações não commitadas.
+    git stash pop = Recupera as alterações guardadas.
 
 git log = Mostra o histórico de alterações do repo. "Q" (ou "Ctrl+C" no Linux) sai desse modo.
     git log --oneline -1 = Mostra o commit atual (onde o HEAD está).
     git log --oneline --graph --all = Mostra onde os branches se separam.
 
+git reflog = Mostra o histórico de movimentação do HEAD.
+
 git mv (arquivo antigo) (arquivo/local novo) = Move um arquivo (Ctrl+X). Pode ser usado para renomear o arquivo.
 
 git rm (arquivo) = Remove o arquivo.
+
+git clean = Remove arquivos não rastreados pelo Git.
+    git clean -fd = Remove arquivos e pastas não rastreados pelo Git.
+    git clean -n = Simula a remoção, exibindo uma lista dos arquivos que seriam excluídos sem removê-los.
+    git clean -fx = Remove arquivos não rastreados e também arquivos que estão listados no .gitignore.
 
 git clone (url) = Clona o repo inteiro em uma pasta. Utilizado ao entrar em um projeto em andamento.
     git clone (url) . = Clona o repo dentro do diretório atual (só se a pasta estiver vazia).
@@ -54,10 +71,10 @@ git checkout (commit) = Desanexa o HEAD, movendo-o para um commit ao invés de b
     git checkout (commit/branch)~(num) = Desanexa o HEAD, movendo-o para commit anterior equivalente ao número.
 
 git reset origin/main = Utilizado para voltar ao último commit. Se não especificado, utiliza o "--mixed" automaticamente.
+git reset (referência) = Reverte alterações no histórico realizadas após a referência. Se não especificado, utiliza o "--mixed" automaticamente.
     git reset --soft origin/main = Mantém os arquivos e o Stage, mas volta o histórico.
     git reset --mixed origin/main = Mantém os arquivos, mas limpa o Stage e volta o histórico.
     git reset --hard origin/main = Apaga os arquivos, limpa o Stage e volta o histórico.
-git reset (referência) = Reverte alterações no histórico realizadas após a referência.
 
 git revert (referência) = Cria um novo commit que desfaz as alterações da referência, sem apagar o histórico anterior.
 git revert HEAD =  Cria um novo commit para desfazer o último commit.
@@ -93,3 +110,7 @@ git show = Exibe todo o histórico e as alterações do HEAD.
     git show (referência) = Exibe o histórico e alterações da referência selecionada.
     git show --name-only (nome da tag ou commit) = Mostra o nome do arquivo modificado.
     git show -s (referência) = Exibe apenas a mensagem da alteração.
+
+git blame (arquivo) = Mostra quem alterou cada linha do arquivo.
+
+.gitignore = Arquivo utilizado para ignorar arquivos/pastas no Git.
