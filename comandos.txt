@@ -18,7 +18,7 @@ git diff = Mostra alterações ainda não adicionadas ao Stage.
 git branch = Lista todos os branches.
     git branch -M (nome do branch) = Renomeia o branch atual, forçando a alteração. A primeira e principal costuma ser a main.
     git branch (nome do branch) = Cria um branch novo.
-    git branch -d (nome do branch) = Apaga o branch selecionado.
+    git branch -d/--delete (nome do branch) = Apaga o branch selecionado.
     git branch -f/--force (nome do branch) (referência) = Move à força o branch selecionado para a referência.
 
 git remote = É um repo remoto.
