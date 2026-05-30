@@ -30,6 +30,7 @@ git remote = É um repo remoto.
     git remote rm (nome) = Remove um repo remoto.
 
 git push = Envia os arquivos (ou suas alterações) locais para o repo remoto.
+    git push -u origin (branch) = Dá um push, na branch selecionada.
     git push -u origin main = Nesse caso, dá um push, na branch principal.
     git push -f origin main = Força o push, sobrescrevendo o que está no GitHub.
 
