@@ -15,11 +15,16 @@ git commit = "Commita" o arquivo. Envia os arquivos (ou suas alterações) para 
 git diff = Mostra alterações ainda não adicionadas ao Stage.
     git diff --staged = Mostra alterações que estão no Stage.
 
-git branch = Lista todos os branches.
+git branch = Lista os branches locais.
+    git branch -r = Lista os branches remotos.
+    git branch -a = Lista, com base no histórico do PC, todos os branches, tanto locais quanto remotos. 
+    git branch -vv = Lista os branches locais, exibindo o hash e a mensagem do último commit na branch.
     git branch -M (nome do branch) = Renomeia o branch atual, forçando a alteração. A primeira e principal costuma ser a main.
     git branch (nome do branch) = Cria um branch novo.
     git branch -d/--delete (nome do branch) = Apaga o branch selecionado.
     git branch -f/--force (nome do branch) (referência) = Move à força o branch selecionado para a referência.
+
+git ls-remote ds origin = Lista, em tempo real, todos os branches que existem no repo.
 
 git remote = É um repo remoto.
     git remote -v = Mostra a url remota após o nome.
@@ -30,6 +35,7 @@ git remote = É um repo remoto.
     git remote rm (nome) = Remove um repo remoto.
 
 git push = Envia os arquivos (ou suas alterações) locais para o repo remoto.
+    git push -u origin (branch) = Interliga seu branch local ao branch remoto. Usado para adicionar o branch local no repositório.
     git push -u origin main = Nesse caso, dá um push, na branch principal.
     git push -f origin main = Força o push, sobrescrevendo o que está no GitHub.
 
@@ -39,6 +45,7 @@ git pull = Baixa as alterações do repo remoto.
 git fetch = Baixa alterações do repo remoto sem aplicá-las no branch atual.
     git fetch (repositório) = Baixa as alterções de um repositório específico sem alterar a branch atual.
     git fetch --all = Baixa as alterções de todos os repositórios sem alterar a branch atual.
+    git fetch --prune = Limpa o repo local removendo referências a branches que já foram deletadas no servidor remoto.
 
 git stash = Guarda temporariamente alterações não commitadas.
     git stash pop = Recupera as alterações guardadas.
